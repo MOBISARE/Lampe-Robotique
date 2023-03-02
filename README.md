@@ -11,9 +11,7 @@ M. ZIMOL Guillaume
 M. MOSELLE Marie-Luc
 
 Using: 
-https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white
-
-https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 ## Sujet du projet
 
@@ -26,6 +24,7 @@ Un fichier PDF le décrivant est également disponible à la racine du projet (S
 La première étape de notre initiation à la recherche était la représentation d'une lampe au format URDF. Cette première représentation est décrite dans le fichier "lampe_test.urdf".
 
 ## Rapport 
+[![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://www.latex-project.org/)
 
 Notre rapport est en cours de rédaction, sur overleaf: https://www.overleaf.com/read/trcvkxkjskfy
 
