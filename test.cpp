@@ -2,7 +2,6 @@
 #include <robot_dart/robot_dart_simu.hpp>
 #include <robot_dart/robots/lampe.hpp>
 
-
 #ifdef GRAPHIC
 #include <robot_dart/gui/magnum/graphics.hpp>
 #endif
@@ -25,13 +24,35 @@ int main()
 #endif
     simu.add_robot(robot);
 
-    std::cout << robot->body_pose("head_link").translation().transpose() << std::endl;
-    simu.run(1.0);
-
-    ctrl << 0.0, 0.5, -0.5, 0.0;
+    // Move the lamp head up
+    ctrl << 0.0, 0.2, 0.0, 0.0;
     controller->set_parameters(ctrl);
     controller->set_pd(10., 0.);
-    simu.run(2.0);
+    simu.run(1.0);
+
+    // Move the lamp arm up
+    ctrl << 0.0, 0.0, 0.2, 0.0;
+    controller->set_parameters(ctrl);
+    controller->set_pd(10., 0.);
+    simu.run(1.0);
+
+    // Rotate the lamp arm
+    ctrl << 0.0, 0.0, 0.0, -0.2;
+    controller->set_parameters(ctrl);
+    controller->set_pd(10., 0.);
+    simu.run(1.0);
+
+    // Move the lamp arm down
+    ctrl << 0.0, 0.0, -0.2, 0.0;
+    controller->set_parameters(ctrl);
+    controller->set_pd(10., 0.);
+    simu.run(1.0);
+
+    // Move the lamp head down
+    ctrl << 0.0, -0.2, 0.0, 0.0;
+    controller->set_parameters(ctrl);
+    controller->set_pd(10., 0.);
+    simu.run(1.0);
 
     std::cout << robot->body_pose("head_link").translation().transpose() << std::endl;
 
