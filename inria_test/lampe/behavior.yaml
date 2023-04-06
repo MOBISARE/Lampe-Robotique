@@ -1,0 +1,8 @@
+BEHAVIOR:
+  name : generic::cartesian
+  task_names: [ee]
+  trajectory_duration: 2
+  relative_targets_pos: [[-0.4, 0, 0]]
+  relative_targets_rpy: [[], []]
+  loop: true
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<robot name="lampe">
+    <group_state name="start" group="all">
+        <joint name="base_yaw_joint" value="0."/>
+        <joint name="arm_pitch_joint" value="0.786"/>
+        <joint name="arm2_pitch_joint" value="0."/>
+        <joint name="head_pitch_joint" value="-0.786"/>
+    </group_state>
+</robot>
+

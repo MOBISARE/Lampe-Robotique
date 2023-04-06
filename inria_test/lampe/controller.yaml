@@ -1,0 +1,16 @@
+CONTROLLER:
+  name: pos-tracker
+  base_path: /home/pal/inria_wbc/etc/lampe
+  solver: eiquadprog
+  tasks: tasks.yaml
+  urdf: lampe.urdf
+  configurations: configuration.srdf
+  ref_config: start
+  floating_base: false
+  floating_base_joint_name: ""
+  dt: 0.001
+  closed_loop: false
+  verbose: false
+  mimic_dof_names : []
+  check_model_collisions: false
+  collision_path: "
