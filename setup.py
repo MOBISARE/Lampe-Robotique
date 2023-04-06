@@ -12,7 +12,13 @@ def executeRbLamp():
     process.wait()
 
 def buildFranka():
-    process = subprocess.Popen(["cmake", "-DCMAKE_PREFIX_PATH=~/install", "-S", "/home/pal/inria_wbc", "-B", "/home/pal/inria_wbc/build"]) #
+    process = subprocess.Popen(["cmake", "-DCMAKE_PREFIX_PATH=~/install", "-S", "/home/pal/inria_wbc", "-B", "/home/pal/inria_wbc/build"])
+    process.wait()
+    process = subprocess.Popen(["make", "/home/pal/inria_wbc/build/franka_graphics"])
+    process.wait()
+
+def executeFranka():
+    process = subprocess.Popen(["/home/pal/inria_wbc/build/franka_graphics"])
     process.wait()
 
 # AJOUTER DES OPTIONS ICI
@@ -20,6 +26,7 @@ menu_options = {
     1: ['Build & Copie (OBLIGATOIRE)', setupProject],
     2: ['Executer Exemple RobotDart Lampe', executeRbLamp],
     3: ['Inria WBC Build Franka', buildFranka],
+    4: ['Inria WBC Execute Franka (GRAPHICS)', executeFranka],
 }
 
 # PAS BESOIN DE TOUCHER
