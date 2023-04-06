@@ -16,8 +16,6 @@ cd ..
 
 #Setup du projet
 
-source_dir="./Lampe-Robotique/"
-
 
 
 
@@ -32,11 +30,11 @@ destination_dir="./robot_dart/src/examples/"
 
 
 
-if [ -e "$sourcce_dir$file_lampe_cpp" ] 
+if [ -e "$file_lampe_cpp" ] 
 
 then
 
-	cp "$source_dir$file_lampe_cpp" "$destination_dir"
+	cp "$file_lampe_cpp" "$destination_dir"
 
 	echo "Le fichié a été copié avec succès"
 
@@ -58,11 +56,11 @@ destination_dir="./robot_dart/src/robot_dart/robots/"
 
 
 
-if [ -e "$sourcce_dir$file_lampe_hpp" ] 
+if [ -e "$file_lampe_hpp" ] 
 
 then
 
-	cp "$source_dir$file_lampe_hpp" "$destination_dir"
+	cp "$file_lampe_hpp" "$destination_dir"
 
 	echo "Le fichié a été copié avec succès"
 
