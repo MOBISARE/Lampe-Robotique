@@ -1,5 +1,9 @@
 import subprocess
 
+def goback():
+    process = subprocess.Popen(["cd","/home/pal/Lampe_Robotique"])
+    process.wait()
+
 # AJOUTER DES FONCTIONS ICI
 def setupProject():
     process = subprocess.Popen(["chmod","+x","build_copy.sh"])
@@ -11,15 +15,18 @@ def executeRbLamp():
     process = subprocess.Popen(["/home/pal/robot_dart/build/lampe"])
     process.wait()
 
-def controler():
-    print("Not Implemented")
-    pass
+def buildFranka():
+    process = subprocess.Popen(["cd", "/home/pal/inria_wbc/build"]) #cmake -DCMAKE_PREFIX_PATH=~/install ..
+    process.wait()
+    process = subprocess.Popen(["cmake", "-DCMAKE_PREFIX_PATH=~/install", ".."]) #
+    process.wait()
+    goback()
 
 # AJOUTER DES OPTIONS ICI
 menu_options = {
     1: ['Build & Copie (OBLIGATOIRE)', setupProject],
     2: ['Executer Exemple RobotDart Lampe', executeRbLamp],
-    3: ['Not Implemented', controler],
+    3: ['Inria WBC Build Franka', buildFranka],
 }
 
 # PAS BESOIN DE TOUCHER
