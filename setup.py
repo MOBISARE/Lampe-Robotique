@@ -8,7 +8,7 @@ def setupProject():
     process.wait()
 
 def executeRbLamp():
-    process = subprocess.Popen(["./home/pal/robot_dart/build/lampe"])
+    process = subprocess.Popen(["/home/pal/robot_dart/build/lampe"])
     process.wait()
 
 def controler():
