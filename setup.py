@@ -17,16 +17,11 @@ def buildFranka():
     process = subprocess.Popen(["make", "/home/pal/inria_wbc/build/franka_graphics"])
     process.wait()
 
-def executeFranka():
-    process = subprocess.Popen(["/home/pal/inria_wbc/build/franka_graphics"])
-    process.wait()
-
 # AJOUTER DES OPTIONS ICI
 menu_options = {
     1: ['Build & Copie (OBLIGATOIRE)', setupProject],
     2: ['Executer Exemple RobotDart Lampe', executeRbLamp],
     3: ['Inria WBC Build Franka', buildFranka],
-    4: ['Inria WBC Execute Franka (GRAPHICS)', executeFranka],
 }
 
 # PAS BESOIN DE TOUCHER
