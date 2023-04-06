@@ -1,9 +1,5 @@
 import subprocess
 
-def goback():
-    process = subprocess.Popen(["cd","/home/pal/Lampe_Robotique"])
-    process.wait()
-
 # AJOUTER DES FONCTIONS ICI
 def setupProject():
     process = subprocess.Popen(["chmod","+x","build_copy.sh"])
@@ -16,11 +12,8 @@ def executeRbLamp():
     process.wait()
 
 def buildFranka():
-    process = subprocess.Popen(["cd", "/home/pal/inria_wbc/build"]) #cmake -DCMAKE_PREFIX_PATH=~/install ..
+    process = subprocess.Popen(["cmake", "-DCMAKE_PREFIX_PATH=~/install", "-S", "/home/pal/inria_wbc", "-B", "/home/pal/inria_wbc/build"]) #
     process.wait()
-    process = subprocess.Popen(["cmake", "-DCMAKE_PREFIX_PATH=~/install", ".."]) #
-    process.wait()
-    goback()
 
 # AJOUTER DES OPTIONS ICI
 menu_options = {
