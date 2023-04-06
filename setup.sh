@@ -4,13 +4,13 @@
 
 #Exécuter la configuration waf
 
-cd robot_dart/
+cd ../robot_dart/
 
 ./waf configure
 
 ./waf examples
 
-cd ..
+cd ../Lampe-Robotique/
 
 
 
