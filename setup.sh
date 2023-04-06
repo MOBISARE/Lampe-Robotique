@@ -10,7 +10,7 @@ cd ../robot_dart/
 
 ./waf examples
 
-cd ../Lampe-Robotique/
+cd ../Lampe-Robotique
 
 
 
@@ -24,7 +24,7 @@ cd ../Lampe-Robotique/
 
 file_lampe_cpp="lampe.cpp"
 
-destination_dir="./robot_dart/src/examples/"
+destination_dir="../robot_dart/src/examples/"
 
 
 
@@ -52,7 +52,7 @@ fi
 
 file_lampe_hpp="lampe.hpp"
 
-destination_dir="./robot_dart/src/robot_dart/robots/"
+destination_dir="../robot_dart/src/robot_dart/robots/"
 
 
 
@@ -74,7 +74,33 @@ fi
 
 
 
-cd robot_dart/
+#Copie du fichier lampe.urdf
+
+file_lampe_urdf="lampe.urdf"
+
+destination_dir="../robot_dart/utheque/"
+
+
+
+if [ -e "$file_lampe_urdf" ] 
+
+then
+
+	cp "$file_lampe_urdf" "$destination_dir"
+
+	echo "Le fichié a été copié avec succès"
+
+	
+
+else
+
+	echo "Le fichier n'existe pas dans le répertoire source"
+
+fi
+
+
+
+cd ../robot_dart/
 
 ./waf examples --targets=lampe
 
