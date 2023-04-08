@@ -26,10 +26,7 @@ def buildLampe():
     process.wait()
     process = subprocess.Popen(["cmake", "-DCMAKE_PREFIX_PATH=~/install", "-S", "/home/pal/inria_wbc", "-B", "/home/pal/inria_wbc/build"])
     process.wait()
-    process = subprocess.Popen(["make", "/home/pal/inria_wbc/build/lampe"])
-    process.wait()
-    process = subprocess.Popen(["make", "/home/pal/inria_wbc/build/lampe_graphics"])
-    process.wait()
+    # Il faut make soit meme ensuite
 
 # AJOUTER DES OPTIONS ICI
 menu_options = {
