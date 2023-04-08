@@ -32,3 +32,10 @@ Notre rapport est en cours de rédaction, sur overleaf: https://www.overleaf.com
 
 La présentation est disponible dans le fichier: Présentation_Recherche.pdf, celle-ci n'est pas encore fini.
 
+## Setup
+
+git clone https://github.com/MOBISARE/Lampe-Robotique.git
+Dans le docker à la destination /home/pal
+
+python3 setup.py
+
