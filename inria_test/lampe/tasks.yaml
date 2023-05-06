@@ -1,5 +1,5 @@
 ee:
-    type: se2
+    type: se3
     tracked: head_pitch_joint
     weight: 100.0
     kp: 30.0
